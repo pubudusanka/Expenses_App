@@ -12,6 +12,7 @@ app.get("/", (req,res) => {
 
 console.log(process.env.PORT);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+// use port in .env file or default to 5001
+app.listen(process.env.PORT || 5001, () => {
+    console.log(`Server is running on port ${process.env.PORT || 5001}`);
 });
